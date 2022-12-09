@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useState } from 'react';
 import {Header, titulo} from './Header'
 import BotonesMesero from './BotonesMesero';
@@ -8,7 +9,7 @@ import ProductosBreakfast from './ProductosDesayuno';
 
 const Mesero = () => {
     const [order, setOrder] = useState([]);
-    const[total, setTotal] = useState(0);
+    const[ total, setTotal] = useState(0);
 
     const agregar = (producto) => {
         const arr = [...order];

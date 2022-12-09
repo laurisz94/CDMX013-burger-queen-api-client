@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -13,10 +14,11 @@ export const ProductosComida = ({agregar}) => {
     }, [])
     return (
         <div className='container-productos'>
-            {productos && productos.map(producto =>{
+            {productos && productos.map(producto => {
                 //console.log("producto desayuno:",producto);
                 if(producto.type === "comida"){
                     return <Platillos producto={producto} key={producto.id} agregar={agregar}/>
+
                 }
             })
         } 
