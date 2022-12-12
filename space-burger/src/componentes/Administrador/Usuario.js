@@ -1,6 +1,6 @@
 import React from 'react';
-import editar from '../imagenes/editar.png'
-import borrar from '../imagenes/borrar.png'
+import editar from '../../imagenes/editar.png'
+import borrar from '../../imagenes/borrar.png'
 
 
 const Usuario = (props) => {

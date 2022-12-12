@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Usuario from './Usuario';
-import { Header, titulo } from './Header'
+import { Header, titulo } from '../Header'
 
 const Admin = () => {
     const [usuarios, setUsuarios] = useState(null);

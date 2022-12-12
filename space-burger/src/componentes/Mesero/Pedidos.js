@@ -1,29 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import borrar from '../../imagenes/borrar.png'
 
-
-const Pedido = ({productos, order, agregar}) => {
-    console.log(productos);
+const Pedido = ({order, agregar, restar, eliminar}) => {
+    console.log(order);
     const[total, setTotal] = useState(0);
-    const [resta, setResta] = useState(0);
-    const [producto, setProducto] = useState([]);
     
     //productos.map((producto)=>{
     //    producto
     //});
 
-    const totalPedido = () => {
+     const totalPedido = () => {
         let suma = 0;
         for(let i = 0; i < order.length; i++){
             suma += order[i].precio; 
         }
         return(suma);
     }
+     
     
-    
-    useEffect(()=>{
+     useEffect(()=>{
         setTotal(totalPedido);
-        //setResta(restar);
-    });
+    }); 
 
     return (
         <div className="contenedor-pedidos">
@@ -38,13 +35,10 @@ const Pedido = ({productos, order, agregar}) => {
                         <span className="contador">
                             <button onClick={()=>{agregar(item.product)}}>+</button>
                             <span id='cantidad'>{item.qty}</span>
-                            <button onClick={()=>{  
-                                        item.qty = item.qty-1;
-                                        item.precio = (item.qty-1) * producto.price;
-                                    }
-                             } >-</button>
+                            <button onClick={()=>{item.qty <= 1 ? eliminar(item.product) : restar(item.product)}} >-</button>
                         </span>
                         <span className="precio">${item.precio} </span>
+                        <span onClick={()=> {eliminar(item.product)}}><img className="icono-borrar" src={borrar} alt="borrar" /></span>
                     </li>
                 )}
                 </ul>
