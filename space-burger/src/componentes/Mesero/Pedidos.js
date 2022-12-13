@@ -25,7 +25,11 @@ const Pedido = ({order, agregar, restar, eliminar}) => {
     return (
         <div className="contenedor-pedidos">
             <header>
-                <h1>Pedido #0000:</h1>
+                <form className='form-cliente'> 
+                    <p>Nombre del cliente </p>
+                        <input type="text" className='info-cliente'></input>
+                </form>
+                
             </header>
             <main className="main">
                 <ul className="lista-productos">

@@ -153,16 +153,32 @@ body {
     position: absolute;
   }
 
+  
   .contenedor-pedidos header {
     color: #8C56B5;
     padding: 10px;
     border-bottom: 1px solid #000;
     font-weight: 700;
+    font-size: 20px;
   }
 
   .main {
-    font-size: 30px;
+    font-size: 25px;
 
+  }
+
+  .form-cliente {
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-cliente {
+    height: 30px;
+    width: 150px;
+    margin-left: 13px;
+    margin-top: -5px;
+    margin-bottom: 0;
+    font-size: 15px;
   }
 
   .lista-productos {
